@@ -1,0 +1,12 @@
+{
+  "color-highlight.languages": [
+    "css",
+    "scss",
+    "less",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json"
+  ]
+}
