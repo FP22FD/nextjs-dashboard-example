@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
+const { text } = require('stream/consumers');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -62,11 +63,13 @@ module.exports = {
           gold: '#c49a2a', // Gold accent, ratings, highlights
           accentBorder: 'rgba(124,58,237,0.2)', // Button hover, border, focus ring
           border: 'rgba(0,0,0,0.07)', // Card/input border
+          borderStrong: 'rgba(0,0,0,0.14)', // Stronger border for active/hover states  
           borderSoft: 'rgba(124,58,237,0.2)', // Subtle border, hover/focus
           // Text
           text0: '#111111', // Primary text
           text1: '#444444', // Secondary text
           text2: '#6e6e6e', // Muted / tertiary text
+          text3: '#555555', // Disabled text
           tag1: '#7c3aed', // Tag text, accent
           tag3: '#6e6e6e', // Tag text, muted
           gold: '#c49a2a', // Gold accent text
@@ -99,10 +102,39 @@ module.exports = {
       addBase({
         '@font-face': [
           {
-            fontFamily: 'Playfair Display',
-            fontStyle: 'normal',
-            fontWeight: '400',
-            src: 'url("/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf") format("TrueType")',
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "400",
+            fontDisplay: "swap",
+            src: 'url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype")',
+          },
+          {
+            fontFamily: "Poppins",
+            fontStyle: "italic",
+            fontWeight: "400",
+            fontDisplay: "swap",
+            src: 'url("/fonts/Poppins/Poppins-Italic.ttf") format("truetype")',
+          },
+          {
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "500",
+            fontDisplay: "swap",
+            src: 'url("/fonts/Poppins/Poppins-Medium.ttf") format("truetype")',
+          },
+          {
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "600",
+            fontDisplay: "swap",
+            src: 'url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype")',
+          },
+          {
+            fontFamily: "Poppins",
+            fontStyle: "normal",
+            fontWeight: "700",
+            fontDisplay: "swap",
+            src: 'url("/fonts/Poppins/Poppins-Bold.ttf") format("truetype")',
           },
           {
             fontFamily: 'Playfair Display',
