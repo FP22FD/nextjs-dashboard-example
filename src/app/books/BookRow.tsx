@@ -34,7 +34,7 @@ export default function BookRow({ book }: Props) {
         <Stars rating={book.rating} />
       </td>
       <td className="text-sm text-light-text2 text-center">{book.pages}</td>
-      <td className="text-sm text-light-text2 text-center">{book.year}</td>
+      <td className="text-sm text-light-text2 text-center md:pr-2 lg:pr-2">{book.year}</td>
 
       {/*
       <td className="text-sm text-light-text2 text-center">

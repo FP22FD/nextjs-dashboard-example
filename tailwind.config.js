@@ -8,12 +8,14 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      // Dashboard breakpoints (tablet, desktop, wide monitor) plus a compatibility `sm`.
+      // Keeping `sm` avoids breaking existing responsive utilities across the project.
       screens: {
-        sm: '480px',
-        md: '768px',
-        lg: '1024px',
-        xl: '1280px',
-        xxl: '1536px',
+        sm: '480px',  // Compatibility / small viewport fallback
+        md: '768px',  // Tablet
+        lg: '1024px', // Small desktop / landscape tablet
+        xl: '1280px', // Desktop
+        xxl: '1536px', // Wide monitor
       },
       fontFamily: {
         sans: ['Poppins', ...fontFamily.sans], //Poppins as the default sans font

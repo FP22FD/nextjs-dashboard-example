@@ -56,13 +56,15 @@ export default function AllBooksPage({ className }: Props) {
     }
 
     return (
-        <section className={`flex flex-col text-base ${className ?? ''}`}>
+        <section className={`min-w-0 flex flex-col text-sm sm:text-base ${className ?? ''}`}>
             {/* Header */}
-            <div className={`flex justify-between mb-8 align-middle pb-8 ${className ?? ''}`}>
+            <div className={`flex flex-col sm:flex-row sm:justify-between sm:items-start gap-4 mb-6 sm:mb-8 pb-6 sm:pb-8 ${className ?? ''}`}>
                 <div>
-                    <h1 className="text-3xl font-bold">All Books</h1>
+                    <h1 className="text-2xl sm:text-3xl font-bold">All Books</h1>
                     <Link
-                        href={"/"} className="flex place-items-center gap-2 cursor-pointer whitespace-nowrap transition-transform duration-200 ease-out hover:scale-105 active:scale-95 text-light-text2 hover:text-light-purple">
+                        href={'/'}
+                        className="inline-flex place-items-center gap-2 cursor-pointer whitespace-nowrap transition-transform duration-200 ease-out hover:scale-105 active:scale-95 text-light-text2 hover:text-light-purple"
+                    >
                         <PiArrowLeftLight />
                         <span>Back to home</span>
                     </Link>
@@ -73,7 +75,7 @@ export default function AllBooksPage({ className }: Props) {
                     <button
                         type="button"
                         aria-label="Add Book"
-                        className="bg-light-text0 hover:bg-light-accentBorder hover:text-light-purple text-light-bg1 font-bold px-4 rounded h-8 text-sm"
+                        className="bg-light-text0 hover:bg-light-accentBorder hover:text-light-purple text-light-bg1 font-bold px-4 rounded h-8 text-sm self-start sm:self-auto"
                         onClick={() => setOpen(true)}
                     >
                         + Add Book
@@ -86,13 +88,13 @@ export default function AllBooksPage({ className }: Props) {
             </div>
 
             {/* Search and Genre Filter */}
-            <p className="mt-1 text-light-text2 text-sm place-self-end mr-2">
+            <p className="mt-1 text-light-text2 text-sm place-self-start sm:place-self-end sm:mr-2">
                 <span className="font-semibold mr-1 text-light-text0">{filtered.length}</span>
                 of {ALL_BOOKS.length} books
             </p>
 
-            <div className="flex mb-8 items-center rounded-lg gap-6 border px-4 pt-4 pb-12 bg-light-bg1">
-                <div className="flex items-center gap-2 bg-light-bg2 border border-light-border rounded-lg py-[7px] px-4 w-[min(280px,40vw)] cursor-text transition-all duration-200 hover:shadow-sm hover:border-light-borderSoft focus-within:shadow-md focus-within:border-light-tag1t">
+            <div className="flex flex-col lg:flex-row lg:items-center mb-6 sm:mb-8 rounded-lg gap-4 sm:gap-6 border px-3 sm:px-4 pt-4 pb-6 sm:pb-8 lg:pb-4 bg-light-bg1">
+                <div className="flex items-center gap-2 bg-light-bg2 border border-light-border rounded-lg py-[7px] px-4 w-full md:w-[min(380px,50vw)] lg:w-[min(280px,40vw)] cursor-text transition-all duration-200 hover:shadow-sm hover:border-light-borderSoft focus-within:shadow-md focus-within:border-light-tag1t">
                     <input
                         type="text"
                         placeholder="Search books…"
@@ -106,7 +108,7 @@ export default function AllBooksPage({ className }: Props) {
                     </span>
                 </div>
 
-                <div className="flex content-center space-x-4">
+                <div className="flex flex-wrap items-center gap-2 sm:gap-3 lg:gap-4">
                     <button
                         type="button"
                         onClick={() => setGenreFilter('All')}
@@ -128,8 +130,8 @@ export default function AllBooksPage({ className }: Props) {
             </div>
 
             {/* Books Table */}
-            <div className="rounded-lg overflow-hidden border bg-light-bg1">
-                <table className="w-full text-left border">
+            <div className="rounded-lg border bg-light-bg1 overflow-x-auto">
+                <table className="w-full min-w-[720px] text-left border">
                     <thead className="text-light-text2 text-xs text-muted-foreground bg-light-bg2">
                         <tr>
                             <th className="py-2 px-4">Title</th>

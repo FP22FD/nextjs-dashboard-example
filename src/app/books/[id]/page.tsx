@@ -34,22 +34,16 @@ export const metadata: Metadata = {
 };
 
 type Props = {
-    params: {
+    params: Promise<{
         id: string;
-    }
+    }>;
     className?: string;
 };
 
 export default async function BookDetails({ params, className }: Props) {
-
     const resolvedParams = await params;
-
     const id = String(resolvedParams.id);
     const book = ALL_BOOKS.find((b) => String(b.id) === id);
-
-
-    console.log('ALL_BOOKS:', ALL_BOOKS);
-    console.log('params.id:', params.id, 'converted:', id);
 
     if (!book) return notFound();
 
