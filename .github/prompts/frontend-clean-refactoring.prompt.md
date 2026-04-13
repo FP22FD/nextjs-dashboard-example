@@ -1,3 +1,8 @@
+---
+description: Refactor frontend React/Next.js/TypeScript/Tailwind code for readability and maintainability while preserving behavior.
+agent: "agent"
+---
+
 # Refactoring and Clean Code Guidelines for frontend made with React + Next.js + TypeScript + Tailwind
 
 ## Purpose
