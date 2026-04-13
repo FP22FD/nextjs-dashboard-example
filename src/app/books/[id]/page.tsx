@@ -41,11 +41,6 @@ type Props = {
 };
 
 export default async function BookDetails({ params, className }: Props) {
-    // const id = Number(params.id);
-    // Convert params.id (string) to string for comparison
-    // const book = ALL_BOOKS.find((b) => Number(b.id) === Number(id));
-    // const book = ALL_BOOKS.find((b) => String(b.id) === params.id);
-    // const book = ALL_BOOKS.find((b) => b.id === id);
 
     const resolvedParams = await params;
 

@@ -1,14 +1,5 @@
 import { Book } from '@/app/books/types/book';
 
-//TODO: This fetch is not used anywhere and not working. But it simulates an async data fetch for the book list. We can replace this with a real API call later.
-export const ALL_BOOKS_ASYNC = new Promise<Book[]>((resolve, reject) => {
-  setTimeout(() => {
-    resolve(ALL_BOOKS);
-  }, 1000);
-
-  // reject(new Error("Failed to fetch books"));
-});
-
 export const ALL_BOOKS: Book[] = [
   {
     id: 1,
