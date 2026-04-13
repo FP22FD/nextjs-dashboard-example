@@ -1,15 +1,10 @@
-'use client';
-
 import './globals.css';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Sidebar from '@/components/layout/Sidebar';
-import { usePathname } from 'next/navigation';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
+import AppShell from '@/components/layout/AppShell';
 
 // Global SEO metadata (applies to all pages unless overridden)
 // TODO: Client components (use client) such as RootLayout and AllBooksPage: They cannot have metadata. "use client or use server"
-const metadata: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL('https://yoursite.com'),
 
   title: {
@@ -49,22 +44,6 @@ type Props = {
 };
 
 export default function RootLayout({ children }: Props) {
-  const pathname = usePathname();
-
-  // const mainClass = pathname === '/books' || pathname === '/aboutt' ? 'p-6 bg-light-bg0' : 'p-6 bg-light-surfaceGlow';
-
-  const lightBgRoutes = ['/books'];
-
-  const useLightBg = lightBgRoutes.some(
-    (route) => pathname === route || pathname.startsWith(`${route}/`)
-  );
-
-  const mainClass = useLightBg
-    ? 'p-6 bg-light-bg0'
-    : 'p-6 bg-light-surfaceGlow';
-
-
-
   return (
     <html lang="en">
       <body>
@@ -73,12 +52,7 @@ export default function RootLayout({ children }: Props) {
           <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
           <title>Book Library</title>
         </head> */}
-        <div className="grid min-h-screen grid-rows-[auto_1fr_auto] grid-cols-[250px_1fr]">
-          <Header className="col-span-2" />
-          <Sidebar />
-          <main className={mainClass}>{children}</main>
-          <Footer className="col-span-2" />
-        </div>
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );
