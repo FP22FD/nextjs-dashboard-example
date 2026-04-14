@@ -6,8 +6,6 @@ A modern, responsive web application built with `Next.js` and `Tailwind CSS` to 
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 
----
-
 ## ✨ Overview
 
 Book Library App is a front-end focused project built to practice modern Next.js development. The goal was not only to understand how Next.js structures applications and improves performance, but also to build a clean and intuitive user interface.
@@ -18,8 +16,6 @@ The interface emphasizes:
 - usability
 - component reusability
 - responsive behavior
-
----
 
 ## ⚡ What I Learned About Next.js
 
@@ -68,8 +64,6 @@ The UI was created using an `AI-assisted` design workflow, focusing on:
 
 AI tools were used to support design decisions, not replace them.
 
----
-
 ## ⚙️ Tech Stack
 
 - `Next.js` – React framework with App Router and SSR capabilities
@@ -77,8 +71,6 @@ AI tools were used to support design decisions, not replace them.
 - `Tailwind CSS` – Utility-first CSS framework
 - `TypeScript` – Type-safe JavaScript
 - `React Icons` – Icon library
-
----
 
 ## 🚀 Features
 
@@ -89,8 +81,6 @@ AI tools were used to support design decisions, not replace them.
 - Light mode support (dark mode was explored during AI-assisted design but is not yet implemented)
 - SEO optimized pages using Next.js Metadata API
 
----
-
 ## 🤖 AI Usage
 
 AI tools were used as part of the design and development process to:
@@ -100,8 +90,6 @@ AI tools were used as part of the design and development process to:
 - Improve visual consistency
 
 All architecture, logic, and implementation decisions were made manually.
-
----
 
 ## 🧪 Getting Started
 
@@ -130,8 +118,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses `next/font` to automatically optimize and load fonts.
 
----
-
 ## 🌐 Deployment
 
 This project can be deployed using platforms such as:
@@ -140,8 +126,6 @@ This project can be deployed using platforms such as:
 - Render
 - Azure
 
----
-
 ## 📌 Notes
 
 - Built with focus on Next.js architecture and best practices
@@ -149,16 +133,12 @@ This project can be deployed using platforms such as:
 - Metadata configured with Next.js Metadata API for SEO and Open Graph
 - Ready to be extended with backend integration (e.g., .NET API + PostgreSQL)
 
----
-
 ## 🔮 Future Improvements
 
 - Implement backend integration for persistent data (e.g. .NET API + PostgreSQL)
 - Add dark mode support with Tailwind and design system tokens
 - Improve accessibility (ARIA labels, keyboard navigation)
 - Enhance modal functionality with full CRUD support
-
----
 
 ## 📷 Preview
 
