@@ -4,52 +4,8 @@ import localFont from 'next/font/local';
 import AppShell from '@/components/layout/AppShell';
 import { poppins, playfair } from '@/utils/fonts';
 
-// const poppins = localFont({
-//   src: [
-//     { path: '../../public/fonts/poppins/Poppins-Regular.ttf', weight: '400', style: 'normal' },
-//     { path: '../../public/fonts/poppins/Poppins-Italic.ttf', weight: '400', style: 'italic' },
-//     { path: '../../public/fonts/poppins/Poppins-Medium.ttf', weight: '500', style: 'normal' },
-//     { path: '../../public/fonts/poppins/Poppins-SemiBold.ttf', weight: '600', style: 'normal' },
-//     { path: '../../public/fonts/poppins/Poppins-Bold.ttf', weight: '700', style: 'normal' },
-//   ],
-//   variable: '--font-sans',
-//   display: 'swap',
-// });
-
-// const playfair = localFont({
-//   src: [
-//     {
-//       path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf',
-//       weight: '400',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Medium.ttf',
-//       weight: '500',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf',
-//       weight: '600',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf',
-//       weight: '700',
-//       style: 'normal',
-//     },
-//     {
-//       path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf',
-//       weight: '800',
-//       style: 'normal',
-//     },
-//   ],
-//   variable: '--font-playfair',
-//   display: 'swap',
-// });
-
 // Global SEO metadata (applies to all pages unless overridden)
-// TODO: Client components (use client) such as RootLayout and AllBooksPage: They cannot have metadata. "use client or use server"
+// NB: Client components (use client) such as RootLayout and AllBooksPage: They cannot have metadata. "use client or use server"
 export const metadata: Metadata = {
   metadataBase: new URL('https://yoursite.com'),
 
