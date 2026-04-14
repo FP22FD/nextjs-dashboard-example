@@ -58,7 +58,7 @@ export default function defaultBookSpine({
         textAnchor="middle"
         fill="#444444"
         fontSize={titleFontSize}
-        fontFamily="'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+        className="font-sans"
         fontStyle="normal"
         fontWeight="500"
         letterSpacing="0"
@@ -71,7 +71,7 @@ export default function defaultBookSpine({
           textAnchor="middle"
           fill="#666666"
           fontSize={authorFontSize}
-          fontFamily="'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
+          className="font-sans"
           fontStyle="normal"
           letterSpacing="0.15"
         >

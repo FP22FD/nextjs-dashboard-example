@@ -22,7 +22,7 @@ export default function BookShelf({ className = '', allBooks = ALL_BOOKS }: Prop
     >
       <div className="bookshelf-head mb-8 flex justify-between">
         <div>
-          <h2 className="font-playfair font-bold text-lg color-light-text0">Your Shelf</h2>
+          <h2 className="font-bold text-lg color-light-text0">Your Shelf</h2>
           <p className="text-light-text2 text-xs mt-1">
             A visual strip of your active and featured books
           </p>

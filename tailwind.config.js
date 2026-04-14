@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 
-const { text } = require('stream/consumers');
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
 module.exports = {
@@ -18,8 +17,8 @@ module.exports = {
         xxl: '1536px', // Wide monitor
       },
       fontFamily: {
-        sans: ['Poppins', ...fontFamily.sans], //Poppins as the default sans font
-        playfair: ['"Playfair Display"', 'serif'], // Playfair Display for headings and display text
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        playfair: ['var(--font-playfair)', 'serif'],
       },
       fontSize: {
         'display-1': ['3.75rem', { lineHeight: '1.1', fontWeight: '700' }], // 60px text-6xl
@@ -99,72 +98,5 @@ module.exports = {
       custom: '0 10px 20px rgba(194, 194, 194, 0.16)', // Custom shadow #C2C2C2
     },
   },
-  plugins: [
-    function ({ addBase }) {
-      addBase({
-        '@font-face': [
-          {
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: "400",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Poppins/Poppins-Regular.ttf") format("truetype")',
-          },
-          {
-            fontFamily: "Poppins",
-            fontStyle: "italic",
-            fontWeight: "400",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Poppins/Poppins-Italic.ttf") format("truetype")',
-          },
-          {
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: "500",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Poppins/Poppins-Medium.ttf") format("truetype")',
-          },
-          {
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: "600",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype")',
-          },
-          {
-            fontFamily: "Poppins",
-            fontStyle: "normal",
-            fontWeight: "700",
-            fontDisplay: "swap",
-            src: 'url("/fonts/Poppins/Poppins-Bold.ttf") format("truetype")',
-          },
-          {
-            fontFamily: 'Playfair Display',
-            fontStyle: 'normal',
-            fontWeight: '500',
-            src: 'url("/fonts/PlayfairDisplay/PlayfairDisplay-Medium.ttf") format("TrueType")',
-          },
-          {
-            fontFamily: 'Playfair Display',
-            fontStyle: 'normal',
-            fontWeight: '600',
-            src: 'url("/fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf") format("TrueType")',
-          },
-          {
-            fontFamily: 'Playfair Display',
-            fontStyle: 'normal',
-            fontWeight: '700',
-            src: 'url("/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf") format("TrueType")',
-          },
-          {
-            fontFamily: 'Playfair Display',
-            fontStyle: 'normal',
-            fontWeight: '800',
-            src: 'url("/fonts/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf") format("TrueType")',
-          },
-        ],
-        h1: { fontFamily: 'Playfair Display, serif' },
-      });
-    },
-  ],
+  plugins: [],
 };

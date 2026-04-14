@@ -1,6 +1,51 @@
 import './globals.css';
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import AppShell from '@/components/layout/AppShell';
+
+const poppins = localFont({
+  src: [
+    { path: '../../public/fonts/poppins/Poppins-Regular.ttf', weight: '400', style: 'normal' },
+    { path: '../../public/fonts/poppins/Poppins-Italic.ttf', weight: '400', style: 'italic' },
+    { path: '../../public/fonts/poppins/Poppins-Medium.ttf', weight: '500', style: 'normal' },
+    { path: '../../public/fonts/poppins/Poppins-SemiBold.ttf', weight: '600', style: 'normal' },
+    { path: '../../public/fonts/poppins/Poppins-Bold.ttf', weight: '700', style: 'normal' },
+  ],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const playfair = localFont({
+  src: [
+    {
+      path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Medium.ttf',
+      weight: '500',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-SemiBold.ttf',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/PlayfairDisplay/PlayfairDisplay-ExtraBold.ttf',
+      weight: '800',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-playfair',
+  display: 'swap',
+});
 
 // Global SEO metadata (applies to all pages unless overridden)
 // TODO: Client components (use client) such as RootLayout and AllBooksPage: They cannot have metadata. "use client or use server"
@@ -46,7 +91,7 @@ type Props = {
 export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${poppins.variable} ${playfair.variable} font-sans`}>
         {/* Method manually setting the favicon in Next.js */}
         {/* <head>
           <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
