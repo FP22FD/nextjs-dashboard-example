@@ -75,22 +75,22 @@ export default function BookDetailsPage({ id, title, author, year }: Props) {
 
                         <dl className="flex flex-col space-y-3 text-light-text2">
                             <div className="flex justify-between border-b pb-1">
-                                <dt className="opacity-75">Genre</dt>
+                                <dt>Genre</dt>
                                 <dd>fantasy</dd>
                             </div>
 
                             <div className="flex justify-between border-b pb-1">
-                                <dt className="opacity-75">Pages</dt>
+                                <dt>Pages</dt>
                                 <dd>302</dd>
                             </div>
 
                             <div className="flex justify-between border-b pb-1">
-                                <dt className="opacity-75">Language</dt>
+                                <dt>Language</dt>
                                 <dd>English</dd>
                             </div>
 
                             <div className="flex justify-between border-b pb-1">
-                                <dt className="opacity-75">ISBN</dt>
+                                <dt>ISBN</dt>
                                 <dd>978-0316012354</dd>
                             </div>
                         </dl>
