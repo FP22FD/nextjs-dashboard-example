@@ -51,7 +51,7 @@ export default function AllBooksPage({ className }: Props) {
     }, [search, genreFilter]);
 
     function handleAddBook(data: { title: string; author: string }) {
-        // TODO: Integrate with server in future (POST request)
+
         setOpen(false);
     }
 
